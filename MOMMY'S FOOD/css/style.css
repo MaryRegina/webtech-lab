@@ -1,0 +1,44 @@
+
+#mainpagebody{
+    background-image: url(images/background3.jpg);
+}
+
+#mainpageh1{
+    text-align: center;
+    color:whitesmoke;
+    text-transform: lowercase;
+    text-shadow: 2px 1px cornflowerblue;
+    margin-bottom: 20px;
+    font-family: serif;
+    font-size: 50px;
+}
+
+#mainpageheader{
+    text-transform: capitalize;
+    font-size: 18px;
+    font-family: serif;
+}
+
+.header{
+    background-color: darkslategray;
+    color:whitesmoke;
+    text-align: center;
+    font-family: serif;
+    text-transform: capitalize;
+    font-size: 17px;
+}
+
+.h1{
+    text-transform: lowercase;
+    text-shadow: 2px 1px cornflowerblue; 
+}
+
+
+.h4diet{
+        text-transform: uppercase;
+        font-family:cursive;
+        color:darkred;
+        text-shadow: 1px 2px black;
+        text-align: center;
+        margin: 40px;
+    }
