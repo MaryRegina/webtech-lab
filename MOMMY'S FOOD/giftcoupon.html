@@ -1,0 +1,207 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="application-name" content="MOMMY'S FOOD">
+<meta name="author" content="Regina">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MOMMY'S_FOOD/user/gift_coupon</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+  transition: background-color .5s;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: black;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a, .dropdown-btn{
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  border:0px;
+  background: none;
+  width: 100%;
+  text-align: left;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+    width:100px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+    
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+ .dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+.active {
+  background-color: grey;
+  color: white;
+}
+/*    bodystyle*/
+#map{
+           width:100%;
+           height:500px;
+           margin: 0;
+           padding: 0
+       }
+
+</style>
+</head>
+
+<body>
+
+<header style="height: 90px;" class="header"> <h1 class="h1">mommy's food</h1>
+<div style="float:right"class="container">
+  <ul class="nav justify-content-end">
+    <li class="nav-item">
+      <a class="nav-link" href="map.html">Gift Coupons</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Edit Profile</a>
+    </li>
+  </ul>
+</div>  
+</header>
+
+<section>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="main.html">Home</a>
+  <a href="profile.html">View profile</a>
+  <a href="#">Post Recipes</a>
+  <button class="dropdown-btn">Explore Recipes 
+    <i class="fa fa-caret-down"></i>
+  </button>
+    <div class="dropdown-container">
+    <a href="#">Non-veg recipes</a>
+    <a href="drinks.html">Drinks</a>
+    <a href="#">Veg recipes</a>
+  </div>
+  <a href="#">Dinner Spinner TV</a>
+  <a href="#">Food News</a>
+  <a href="community.html">Ask our community</a>
+  <a href="contactus.html">Contact us</a>
+  <a href="main.html">Logout</a>
+</div>
+    
+<div style="position:relative; bottom:60px;" id="main">
+  <span style="font-size:30px;cursor:pointer; color:white;" onclick="openNav()">&#9776;</span>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "300px";
+  document.getElementById("main").style.marginLeft = "300px";
+//  document.body.style.backgroundColor = "rgba(1,1,0,0.4)";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+//  document.body.style.backgroundColor = "white";
+}
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+</script>
+</section>
+
+<h1 style="margin-top:-50px; margin-left: 20px;"class="brownstyletext">congragulations!</h1>
+<h4 class="brownstyletext" style="margin-left: 20px;margin-top: 0px;">you have won a gift coupon worth Rs.1000/-</h4>
+
+<button style="margin-left: 20px;background-color: white; margin-bottom: 20px;" onclick="getLocation()">Select current location</button>
+
+<!--<p style="margin-left: 20px;" id="demo"></p>    -->
+<div id="map"></div>
+
+<script>
+var x = document.getElementById("demo");
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(initMap);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function initMap (position){
+    
+    var location={lat:position.coords.latitude,lng:position.coords.longitude};
+    var map=new google.maps.Map(document.getElementById("map"),{
+        zoom:8,
+        center: location
+    });
+    var marker=new google.maps.Marker({
+       position:location,
+       map:map
+    });
+    
+    x.innerHTML = "Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+    
+<script defer async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGREOO1di_iM7h_4bAadMQdMkrDhBHdCo&callback=initMap">
+</script>
+    
+<button style="margin-left:20px; margin-top: 50px; background-color: white; margin-bottom: 20px;" onclick="confirm()">Confirm location</button>
+
+    <script>
+        function confirm(){
+            alert("Location Confirmed! Your gift coupon will be reaching shortly");
+        }
+    </script>
+
+</body>
+</html>

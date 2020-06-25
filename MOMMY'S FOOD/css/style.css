@@ -47,3 +47,12 @@
 header a{
     color:yellow;
 }
+
+.brownstyletext{
+        text-transform: uppercase;
+        font-family:cursive;
+        color:darkred;
+        text-shadow: 1px 2px black;
+        margin-bottom: 20px;
+        margin-top: 40px;
+}

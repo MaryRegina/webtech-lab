@@ -1,0 +1,220 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="application-name" content="MOMMY'S FOOD">
+<meta name="author" content="Regina">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MOMMY'S_FOOD/user/drinks</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: black;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a, .dropdown-btn{
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  border:0px;
+  background: none;
+  width: 100%;
+  text-align: left;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+    
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+ .dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+.active {
+  background-color: grey;
+  color: white;
+}
+ .image{
+    margin-left: 100px; 
+    margin-top:20px; 
+    margin-bottom: 20px; 
+    border: 5px solid white;
+    }
+    .margin{
+        margin:80px;
+    }
+    .button a:hover{
+        background-color: skyblue;
+    }
+    #button{
+        border: 0px;
+        background-color: white;
+        font-size: 14px;
+        position: relative;
+        bottom:40px;
+    }
+    #p{
+        position: relative;
+        bottom: 40px;
+    }
+    
+</style>
+
+</head>
+
+<body>
+    <header style="height: 90px;" class="header"> <h1 class="h1">mommy's food</h1>
+</header> 
+<section>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="main.html">Home</a>
+  <a href="profile.html">View profile</a>
+  <a href="#">Post Recipes</a>
+  <button class="dropdown-btn">Explore Recipes 
+    <i class="fa fa-caret-down"></i>
+  </button>
+    <div class="dropdown-container">
+    <a href="#">Non-veg recipes</a>
+    <a href="drinks.html">Drinks</a>
+    <a href="#">Veg recipes</a>
+  </div>
+  <a href="dinnerspinnertv.html">Dinner Spinner TV</a>
+  <a href="#">Food News</a>
+  <a href="community.html">Ask our community</a>
+  <a href="contactus.html">Contact us</a>
+  <a href="main.html">Logout</a>
+</div>
+
+<div style="position:relative; bottom:60px;" id="main">
+  <span style="font-size:30px;cursor:pointer; color:white;" onclick="openNav()">&#9776;</span>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "300px";
+  document.getElementById("main").style.marginLeft = "300px";
+//  document.body.style.backgroundColor = "rgba(1,1,0,0.4)";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+//  document.body.style.backgroundColor = "white";
+}
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+</script>
+</section>
+    
+<div style="background-color: antiquewhite; width:100%;height:500px;">
+<img class="image" src="https://www.bbcgoodfood.com/sites/default/files/recipe-collections/collection-image/2019/12/carrot-clementine-pineapple-juice.jpg">
+<h4 style="position: relative; left:800px;bottom: 400px;" class="brownstyletext">Juice recipes</h4>
+<p style="position: relative; left:700px;bottom: 350px;">Start your day with a freshly blended juice or smoothie.<br>Our refreshing drinks recipes are packed with fruit and veg,<br> delivering a feelgood vitamin boost.</p>
+</div>
+ 
+<div class="margin">
+<video width="500" height="300" controls loop>
+  <source src="videos/lemonshot.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<p class="brownstyletext">Non-Alcoholic Lemon Drop Shots Recipe</p>
+</div>
+
+<div style="position:relative;left:650px;bottom:447px;" class="margin">
+<video width="500" height="300" controls>
+  <source src="videos/applemilkshake.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<p class="brownstyletext">Apple Milkshake Recipe</p>
+</div>
+
+<div style="position:relative; bottom:400px;" class="margin">
+<video width="500" height="300" controls poster="images/limemint.jpg" muted>
+  <source src="videos/lime.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<p class="brownstyletext">Mint Lime Juice</p>
+</div>
+
+<div style="position:relative;left:650px;bottom:850px;" class="margin">
+<video id="video" width="500" height="300" controls>
+  <source src="videos/fuljar.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video><br>
+    
+<button id="button" class="button" onclick="myFunction()"><a class="button">listen only, while cooking</a></button>
+    
+<audio id="audio" controls style="visibility: hidden">
+  <source src="audios/audio.mp3" type="audio/mp3">
+Your browser does not support the audio element.
+</audio>
+    
+<p id="p" class="brownstyletext">Kerala FulJar Soda</p>
+</div>
+
+<script>
+    function myFunction() {
+    document.getElementById("video").style.display = "none";
+    document.getElementById("audio").style.visibility = "visible";
+    document.getElementById("button").style.display = "none";
+    document.getElementById("button1").style.visibility = "visible";
+    }
+</script>
+    
+
+</body>
+</html>
