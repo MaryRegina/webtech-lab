@@ -8,6 +8,21 @@
             .body{
                 margin-left: 10px;
             }
+            .liststyletype{
+                list-style-type:lower-greek;
+            }
+            #h4{
+                color:darkslategrey;font-style:oblique;margin-top: 20px;
+            }
+            #img{
+                margin:20px;
+                width:220px;
+                height: 300px;
+                opacity: 0.6
+            }
+            .liststyleposition{
+                list-style-position: inside;
+            }
         </style>
         
     </head>
@@ -29,14 +44,18 @@
 </ul>
 </header>      
       <div class="body">
-        <h4 style="color:darkslategrey;font-style:oblique"><u>Lemon Smooothie Recipe</u></h4>
+        <h4 id="h4"><u>Lemon Smooothie Recipe</u></h4><br>
+        <img id="img" src="images/smoothie.jpg"/>
         
 <!--        ordered list-->
-        <ol type="1" start="1">
-            <li>Peel and cut your pomegranate.</li>
-            <li style="margin-top: 10px">Finely chop your mint.</li>
-            <li style="margin-top: 10px">Cut and squeeze your lemon so you can use the juice later.</li>
-            <li style="margin-top: 10px">Enjoy the sip</li>
+        <ol class="liststyletype">
+            <li style="margin-top:10px">Pour some milk in a glass</li>
+            <li class="liststyleposition" style="margin-top:5px">Boil milk for 15 minutes</li>
+            <li class="liststyleposition" style="margin-top:5px">Leave it aside to get warm</li>
+            <li style="margin-top:5px">Squeeze a lemon</li>
+            <li style="margin-top:5px">Add some shopped mint</li>
+            <li style="margin-top:5px">Add some pomegranate</li>
+            <li style="margin-top:5px">Enjoy the sip</li>
         </ol>
         
         <h4 style="color:darkslategrey;font-style: oblique"><u>Utensils Required</u></h4>

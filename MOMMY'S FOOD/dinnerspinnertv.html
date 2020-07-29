@@ -8,7 +8,8 @@
 <title>MOMMY'S_FOOD/user/dinnerspinner</title>
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<!--   for rest of the icons-->
 <style>
 body {
   font-family: "Lato", sans-serif;
@@ -109,6 +110,21 @@ body {
     #button{
         background-color: black; margin-left: 440px;
     }
+    
+    p>a:hover{
+        color:orangered;
+    }
+/*
+    p>a:visited{
+        color:mediumpurple;
+    }
+*/
+    p>a:link{
+        text-decoration:underline;
+    }
+    p>a:active{
+        color:yellow;
+    }
 </style>
 </head>
 
@@ -118,22 +134,22 @@ body {
 <section>
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="main.html">Home</a>
-  <a href="profile.html">View profile</a>
-  <a href="#">Post Recipes</a>
-  <button class="dropdown-btn">Explore Recipes 
-    <i class="fa fa-caret-down"></i>
+  <a href="main.html"><span class="fas fa-home"></span>&nbsp;Home</a>
+  <a href="profile.html"><span class="fas fa-user"></span>&nbsp;Profile</a>
+    <a href="#"><span class="fas fa-file-video"></span>&nbsp;Post Recipes</a>
+    <button class="dropdown-btn"><span class="fas fa-utensils"></span>&nbsp;Explore Recipes 
+    <i class="fas fa-caret-down"></i>
   </button>
     <div class="dropdown-container">
     <a href="#">Non-veg recipes</a>
     <a href="drinks.html">Drinks</a>
     <a href="#">Veg recipes</a>
   </div>
-  <a href="dinnerspinnertv.html">Dinner Spinner TV</a>
-  <a href="#">Food News</a>
-  <a href="community.html">Ask our community</a>
-  <a href="contactus.html">Contact us</a>
-  <a href="main.html">Logout</a>
+  <a href="dinnerspinnertv.html"><span class="fas fa-tv"></span>&nbsp;Dinner Spinner TV</a>
+  <a href="#"><span class="fas fa-bullhorn"></span>&nbsp;Food News</a>
+  <a href="community.html"><span class="fas fa-comment-alt"></span>&nbsp;Ask our community</a>
+  <a href="contactus.html"><span class="fas fa-phone-alt"></span>&nbsp;Contact us</a>
+  <a href="main.html"><span class="fas fa-sign-out-alt"></span>&nbsp;Logout</a>
 </div>
 
 <div style="position:relative; bottom:60px;" id="main">
@@ -174,8 +190,12 @@ for (i = 0; i < dropdown.length; i++) {
     
     <embed src="https://player.vimeo.com/video/184059008" width="640" height="360" id="embed" >
     
-    <p id="p">Dinner Spinner TV, <br>part of One Magnificent Morning on The<br> CW. It’s the new cooking competition <br>from the world’s largest community of<br> home cooks.Watch two home cooks<br> battle it out in a kitchen competition<br> based on the popular Allrecipes Dinner<br> Spinner app!</p><br><br>
-    
+    <p id="p">Dinner Spinner TV, <br>part of One Magnificent Morning on The<br> CW. It’s the new cooking competition <br>from the world’s largest community of<br> home cooks.Watch two home cooks<br> battle it out in a kitchen competition<br> based on the popular Allrecipes Dinner<br> Spinner app! <br><br><br>
+        
+        <a href="ds_bestrecipe.html" target="_blank">Best recipe of the week</a><br>
+        <a href="https://www.allrecipes.com/cook/dinnerspinnertvshow/favorites/" target="_blank">Some best recipes</a><br>
+        <a href="https://www.allrecipes.com/cook/dinnerspinnertvshow/reviews/" target="_blank">Reviews of the show</a></p><br><br>
+
    
     <h4 id="h4" class="brownstyletext">follow the show</h4>
    
@@ -185,7 +205,7 @@ for (i = 0; i < dropdown.length; i++) {
     <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
     </div><br>
     
-    <button id="button"><a style="color:orangered"href="ds_bestrecipe.html">see best Recipe of the week</a></button>
+<!--    <button id="button"><a style="color:orangered"href="ds_bestrecipe.html">see best Recipe of the week</a></button>-->
 </div>
 </body>
 </html>

@@ -8,7 +8,8 @@
 <title>MOMMY'S_FOOD/user/drinks</title>
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<!--   for rest of the icons-->
 <style>
 body {
   font-family: "Lato", sans-serif;
@@ -109,22 +110,22 @@ body {
 <section>
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="main.html">Home</a>
-  <a href="profile.html">View profile</a>
-  <a href="#">Post Recipes</a>
-  <button class="dropdown-btn">Explore Recipes 
-    <i class="fa fa-caret-down"></i>
+  <a href="main.html"><span class="fas fa-home"></span>&nbsp;Home</a>
+  <a href="profile.html"><span class="fas fa-user"></span>&nbsp;Profile</a>
+    <a href="#"><span class="fas fa-file-video"></span>&nbsp;Post Recipes</a>
+    <button class="dropdown-btn"><span class="fas fa-utensils"></span>&nbsp;Explore Recipes 
+    <i class="fas fa-caret-down"></i>
   </button>
     <div class="dropdown-container">
     <a href="#">Non-veg recipes</a>
     <a href="drinks.html">Drinks</a>
     <a href="#">Veg recipes</a>
   </div>
-  <a href="dinnerspinnertv.html">Dinner Spinner TV</a>
-  <a href="#">Food News</a>
-  <a href="community.html">Ask our community</a>
-  <a href="contactus.html">Contact us</a>
-  <a href="main.html">Logout</a>
+  <a href="dinnerspinnertv.html"><span class="fas fa-tv"></span>&nbsp;Dinner Spinner TV</a>
+  <a href="#"><span class="fas fa-bullhorn"></span>&nbsp;Food News</a>
+  <a href="community.html"><span class="fas fa-comment-alt"></span>&nbsp;Ask our community</a>
+  <a href="contactus.html"><span class="fas fa-phone-alt"></span>&nbsp;Contact us</a>
+  <a href="main.html"><span class="fas fa-sign-out-alt"></span>&nbsp;Logout</a>
 </div>
 
 <div style="position:relative; bottom:60px;" id="main">
@@ -196,7 +197,7 @@ for (i = 0; i < dropdown.length; i++) {
   Your browser does not support the video tag.
 </video><br>
     
-<button id="button" class="button" onclick="myFunction()"><a class="button">listen only, while cooking</a></button>
+<button id="button" class="button" onclick="myFunction()"><a class="button"><span class="fas fa-headphones-alt">&nbsp;JustListen</span></a></button>
     
 <audio id="audio" controls style="visibility: hidden">
   <source src="audios/audio.mp3" type="audio/mp3">
