@@ -1,0 +1,268 @@
+﻿<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="application-name" content="MOMMY'S FOOD">
+  <meta name="author" content="Regina">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MOMMY'S_FOOD/user/dinnerspinner</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <!--   for rest of the icons-->
+  <style>
+    body {
+      font-family: "Lato", sans-serif;
+      transition: background-color .5s;
+    }
+
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: black;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+
+    .sidenav a,
+    .dropdown-btn {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+      border: 0px;
+      background: none;
+      width: 100%;
+      text-align: left;
+    }
+
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+    #main {
+      transition: margin-left .5s;
+      padding: 16px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .sidenav {
+        padding-top: 15px;
+      }
+
+      .sidenav a {
+        font-size: 18px;
+      }
+    }
+
+    .fa-caret-down {
+      float: right;
+      padding-right: 8px;
+    }
+
+    .dropdown-container {
+      display: none;
+      background-color: #262626;
+      padding-left: 8px;
+    }
+
+    .active {
+      background-color: grey;
+      color: white;
+    }
+
+
+    /*css for body*/
+    #div1 {
+      background-color: black;
+      margin-left: 100px;
+      margin-right: 100px;
+      height: 1100px;
+      margin-bottom: 50px;
+    }
+
+    #h1 {
+      color: orangered;
+      text-align: center;
+      margin-bottom: 100px;
+    }
+
+    #embed {
+      margin-left: 50px;
+    }
+
+    #p {
+      color: white;
+      float: right;
+      margin-right: 100px;
+    }
+
+    #div2 {
+      background-color: black;
+      margin-left: 100px;
+      margin-right: 100px;
+      border: 2px solid white;
+    }
+
+    #h4 {
+      color: white;
+      margin-left: 400px;
+      width: 300px;
+      background-color: orangered;
+      padding: 10px;
+      position: relative;
+      animation: myfirstanimation 5s linear 2s infinite alternate;
+    }
+
+    @keyframes myfirstanimation {
+      0% {
+        background-color: orangered;
+        left: -200px;
+        top: 0px;
+      }
+
+      50% {
+        background-color: orange;
+        left: 200px;
+        top: 0px;
+      }
+
+      100% {
+        background-color: orangered;
+        left: -200px;
+        top: 0px;
+      }
+    }
+
+    #img {
+      margin-left: 400px;
+    }
+
+    #button {
+      background-color: black;
+      margin-left: 440px;
+    }
+
+    p>a:hover {
+      color: orangered;
+    }
+
+    p>a:visited {
+      color: mediumpurple;
+    }
+
+    p>a:link {
+      text-decoration: underline;
+    }
+
+    p>a:active {
+      color: yellow;
+    }
+  </style>
+</head>
+
+<body>
+  <header style="height: 90px;" class="header">
+    <h1 class="h1">mommy's food</h1>
+  </header>
+  <section>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="main.html"><span class="fas fa-home"></span>&nbsp;Home</a>
+      <a href="profile.html"><span class="fas fa-user"></span>&nbsp;Profile</a>
+      <a href="#"><span class="fas fa-file-video"></span>&nbsp;Post Recipes</a>
+      <button class="dropdown-btn"><span class="fas fa-utensils"></span>&nbsp;Explore Recipes
+        <i class="fas fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="nonveg.html">Non-veg recipes</a>
+        <a href="drinks.html">Drinks</a>
+        <a href="#">Veg recipes</a>
+      </div>
+      <a href="dinnerspinnertv.html"><span class="fas fa-tv"></span>&nbsp;Dinner Spinner TV</a>
+      <a href="#"><span class="fas fa-bullhorn"></span>&nbsp;Food News</a>
+      <a href="community.html"><span class="fas fa-comment-alt"></span>&nbsp;Ask our community</a>
+      <a href="contactus.html"><span class="fas fa-phone-alt"></span>&nbsp;Contact us</a>
+      <a href="main.html"><span class="fas fa-sign-out-alt"></span>&nbsp;Logout</a>
+    </div>
+
+    <div style="position:relative; bottom:60px;" id="main">
+      <span style="font-size:30px;cursor:pointer; color:white;" onclick="openNav()">&#9776;</span>
+    </div>
+
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "300px";
+        document.getElementById("main").style.marginLeft = "300px";
+        //  document.body.style.backgroundColor = "rgba(1,1,0,0.4)";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+        //  document.body.style.backgroundColor = "white";
+      }
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var dropdownContent = this.nextElementSibling;
+          if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+          } else {
+            dropdownContent.style.display = "block";
+          }
+        });
+      }
+    </script>
+  </section>
+
+  <div id="div1">
+    <h1 class="brownstyletext" id="h1">dinner spinner&nbsp;<sub>the show</sub></h1>
+
+    <embed src="https://player.vimeo.com/video/184059008" width="640" height="360" id="embed">
+
+    <p id="p">Dinner Spinner TV, <br>part of One Magnificent Morning on The<br> CW. It’s the new cooking competition
+      <br>from the world’s largest community of<br> home cooks.Watch two home cooks<br> battle it out in a kitchen
+      competition<br> based on the popular Allrecipes Dinner<br> Spinner app! <br><br><br>
+
+      <a href="ds_bestrecipe.html" target="_blank">Best recipe of the week</a><br>
+      <a href="https://www.allrecipes.com/cook/dinnerspinnertvshow/favorites/" target="_blank">Some best recipes</a><br>
+      <a href="https://www.allrecipes.com/cook/dinnerspinnertvshow/reviews/" target="_blank">Reviews of the show</a></p>
+    <br><br>
+
+
+    <h4 id="h4" class="brownstyletext">follow the show</h4>
+
+
+    <div id="div2">
+      <blockquote class="embedly-card">
+        <h4><a href="https://www.allrecipes.com/cook/dinnerspinnertvshow/">Follow the show</a></h4>
+        <p>Follow the show Dinner Spinner and explore more recipes</p>
+      </blockquote>
+      <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+    </div><br>
+
+    <!--    <button id="button"><a style="color:orangered"href="ds_bestrecipe.html">see best Recipe of the week</a></button>-->
+  </div>
+</body>
+
+</html>

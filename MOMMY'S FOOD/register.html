@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<title>MOMMY'S_FOOD/register</title>
+<link rel=stylesheet type="text/css" href="css/style.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<style>
+    form>div{
+        margin: 20px;
+    }
+    .registercoldiv{
+        margin-right: 700px;
+    }
+    #divbutton{
+        margin-left: 290px;
+    }
+    #formheading{
+        text-transform: uppercase;
+        font-family:cursive;
+        color:darkred;
+        text-shadow: 1px 2px black;
+        margin-bottom: 20px;
+        margin-top: 40px;
+    }
+    #maindiv{
+        margin-left: 10px;
+    }
+</style>
+</head>
+    
+    
+<body>
+<header class="header"> <h1 class="h1">mommy's food</h1>
+<ul class="nav justify-content-left">
+  <li class="nav-item">
+    <a class="nav-link" href="main.html">home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="recipes.html">recipes</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="dietplans.html">dietplans</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="aboutus.html">aboutus</a>
+      
+  </li>
+</ul>
+</header> 
+<div id="maindiv">
+<form action="login.html" name="register">
+ 
+  <h4 id=formheading>Register as user</h4>
+  <div class="row">
+    <div class="col">
+      <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" required>
+    </div>
+    <div class="col registercoldiv">
+      <input type="email" class="form-control " id="email" placeholder="Enter email" name="email" required >
+    </div>
+  </div>
+    
+  <div class="row">
+  <div class="col">
+      <input type="text" class="form-control" placeholder="Enter phno" name="phno" maxlength=10 required>
+  </div>
+  <div class="col registercoldiv" >
+      <lable for="gender">gender: &nbsp; <label for="male"><input type="radio" class="form-control-sm" name="gender">male &nbsp;</label><label for="female"><input type="radio" class="form-control-md" name="gender" >female</label></lable>
+  </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <input type="password" class="form-control" placeholder="Create password" name="createpwd" required>
+    </div>
+    <div class="col registercoldiv">
+      <input type="password" class="form-control" placeholder="Confirm password" name="confirmpwd" required>
+    </div>
+  </div>
+    
+  <div class="row">
+      <div class="col">
+          <label>Likes: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <lable class="form-check-label"><input type=checkbox class="form-check-input" name="southindian"/>South indian &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</lable>
+          <lable class="form-check-label"><input type=checkbox class="form-check-input" name="northindian"/>North indian &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</lable>
+          <lable class="form-check-label"><input type=checkbox class="form-check-input" name="dessert"/>Desserts &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</lable>
+          <lable class="form-check-label"><input type=checkbox class="form-check-input" name="snacks"/>Snacks & Chats</lable>
+          </label>
+      </div>
+  </div>
+    
+  <div id="divbutton" class="row">
+      <button type="submit" class="btn btn-primary">Register</button>
+     </div>
+</form>
+</div> 
+   
+</body>
+</html>

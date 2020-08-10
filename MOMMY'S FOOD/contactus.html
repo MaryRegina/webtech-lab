@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<title>MOMMY'S_FOOD/contactus</title>
+<link rel=stylesheet type="text/css" href="css/style.css">
+<style>
+    #maindiv{
+        margin: 50px;
+    }
+    
+    legend{
+        text-transform: uppercase;
+        font-family:cursive;
+        color:darkred;
+        text-shadow: 1px 2px black;
+        margin-bottom: 20px;
+        margin-top: 40px;
+    }
+    #select{
+        width:200px;
+        height: 30px;
+    }
+    #mail{
+        height: 23px;
+    }
+    
+    #fieldset{
+        width:400px;
+    }
+</style>
+    <script>
+function myFunction() {
+  alert("Query submitted successfully");
+}
+</script>
+
+</head>
+
+<body>
+<header>
+    <img src="images/contactus.jpg">
+</header>  
+<form >
+  <fieldset id="fieldset">
+    <legend>Contact us</legend>
+    <label for="fname">Mail id:</label><br>
+    <input type="email" id="mail" name="email" size="30" required><br><br>
+      
+      
+    <label for="category">What's this about?</label><br>
+     <select name="category" id="select">
+    <optgroup label="Recipe">
+      <option value="posts">Posts</option>
+      <option value="queries">queries</option>
+    </optgroup>
+    <optgroup label="Payment">
+      <option value="delay">Delay</option>
+      <option value="account">Account problem</option>
+      <option value="giftcards">Gift card</option>
+    </optgroup>
+      <option>other</option>
+  </select><br><br><br>
+    <textarea name="comment" rows="4" cols="50" maxlength="50" placeholder="How Can We Help You?" required></textarea> <br><br>
+      <input type="submit" value="Submit" onclick="myFunction()"><br><br>
+  </fieldset>
+</form>
+</body>
+</html>

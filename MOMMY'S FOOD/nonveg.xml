@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!DOCTYPE nonveg SYSTEM "nonveg.dtd">
+
+<nonveg>
+<recipe>
+      <title>Chilly Chicken</title>
+       <!-- <ingredients>
+       <ingredient name="chicken" amount="1" unit="kg"></ingredient>
+       <ingredient name="green chillies" amount="10"></ingredient>
+       <ingredient name="ginger garlic paste" amount="100" unit="grams"></ingredient>
+       <ingredient name="salt" amount="half tea spoon"></ingredient>
+       <ingredient name="cornflour" amount="1 table spoon"></ingredient>
+       </ingredients> -->
+       <prep> 
+           <step>Take a bowl, put some cornflour</step>
+           <step>add a pinch of salt</step>
+           <step>add genger garlic paste</step>
+           <step>add chilly paste</step>
+           <step>mix all the ingredients well</step>
+           <step>add chicken and marinate for 30 mins</step>
+           <step>deep fry and serve it hot</step>
+       </prep>
+       <!-- <comment>
+            grind some chillies and keep the paste ready or you can take ready made chilly paste 
+       </comment> -->
+       <!-- <nutrition calories="100" fat="13.4" protein="31" Cholesterol="85"></nutrition>
+       <rating>9 out of 10</rating> -->
+</recipe>
+<recipe>
+       <title>Pepper Chicken fry</title>
+       <!-- <ingredients>
+       <ingredient name="pepper" amount="50" unit="grams"></ingredient>
+       <ingredient name="salt" amount="half tea spoon"></ingredient>
+       <ingredient name="chicken" amount="1" unit="kg"></ingredient>
+       </ingredients> -->
+       <prep> 
+           <step>Take a bowl, put some pepper powder</step>
+           <step>add a pinch of salt</step>
+           <step>mix the ingredients well</step>
+           <step>add chicken and marinate for 30 mins</step>
+           <step>shallow fry and serve it hot</step>
+       </prep>
+       <!-- <nutrition calories="70" fat="11.8" protein="24" ></nutrition>
+       <rating>7.0 out of 10</rating> -->
+</recipe>
+<recipe>
+       <title>Chicken Momo</title>
+       <!-- <ingredients>
+       <ingredient name="veggies" amount="200" unit="grams"></ingredient>
+       <ingredient name="chicken" amount="1/2" unit="kg"></ingredient>
+       <ingredient name="salt" amount="half tea spoon"></ingredient>
+       <ingredient name="maida" amount="1/4" unit="kg"></ingredient>
+       </ingredients> -->
+       <prep> 
+           <step>Take a bowl, put some maida</step>
+           <step>add a pinch of salt</step>
+           <step>pour required amount of water and make a dough</step>
+           <step>make stuffing for which sort veggies in an pan with few drops of oil</step>
+           <step>add some salt</step>
+           <step>add chicken keema</step>
+           <step>cook it for 15 mins</step>
+           <step>keep the stuffing in the dough and steam it</step>
+           <step>steamed momo ready to serve</step>
+       </prep>
+       <!-- <nutrition calories="30" fat="9.2" protein="18" ></nutrition>
+       <rating>9.5 out of 10</rating> -->
+</recipe>
+
+</nonveg>

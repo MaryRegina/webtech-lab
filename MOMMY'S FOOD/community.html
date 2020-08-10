@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<title>MOMMY'S_FOOD/community</title>
+<link rel=stylesheet type="text/css" href="css/style.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<style>
+    #maindiv{
+        margin: 50px;
+    }
+    
+    div>h4{
+        text-transform: uppercase;
+        font-family:cursive;
+        color:darkred;
+        text-shadow: 1px 2px black;
+        margin-bottom: 20px;
+        margin-top: 40px;
+    }
+</style>
+<script>
+function myFunction(){
+  alert(" Your food query submitted successfully");
+}
+</script>
+</head>
+    
+    
+<body>
+<header class="header"> <h1 class="h1">mommy's food</h1>
+<ul class="nav justify-content-left">
+  <li class="nav-item">
+    <a class="nav-link" href="main.html">home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="main.html">logout</a>
+  </li>
+</ul>
+</header> 
+<div id="maindiv">
+<h4>Ask the Community</h1>
+<p>Ask "Mommy's food" members questions about cooking and recipes to get responses from real home cooks!
+For website-related questions, contact our customer support team at customerrelations@mommmy'sfood.com</p><br><br><br>
+<form action="#">
+    <div class="form-group">
+      <label for="comment">Ask Question:</label>
+      <textarea class="form-control" id="comment" name="text" maxlength="100" rows="5" required></textarea>
+    </div>
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date">
+    <label for="place">Place:</label>
+    <input list="browsers" name="browser" id="browser">
+    <datalist id="browsers">
+    <option value="Bangalore">
+    <option value="Mumbai">
+    <option value="Kolkata">
+    <option value="Delhi">
+    </datalist>
+    <button type="submit" class="btn btn-primary" onclick="myFunction()">Ask question</button>
+    </form>
+</div>
+</body>
+</html>

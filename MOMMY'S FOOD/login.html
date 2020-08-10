@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<title>MOMMY'S_FOOD/login</title>
+<link rel=stylesheet type="text/css" href="css/style.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel=stylesheet type="text/css" href="css/loginstyle.css">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<style>
+     #loginheading{
+        text-transform: uppercase;
+        font-family:cursive;
+        color:darkred;
+        text-shadow: 1px 2px black;
+        margin-bottom: 20px;
+        margin-top: 40px;
+    }
+</style>
+    
+
+<script language="javascript">
+function check(form)/*function to check userid & password*/
+{
+ /*the following code checkes whether the entered userid and password are matching*/
+ if(form.email.value == "regi@gmail.com" && form.pwd.value == "123")
+  {
+    alert("login successful")
+    window.open('user.html')/*opens the target page while Id & password matches*/
+  }
+ else
+ {
+   alert("Error Password or Username")/*displays error message*/
+  }
+}
+</script>
+</head>
+    
+    
+<body>
+<header class="header"> <h1 class="h1">mommy's food</h1>
+<ul class="nav justify-content-left">
+  <li class="nav-item">
+    <a class="nav-link" href="main.html">home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="recipes.html">recipes</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="dietplans.html">dietplans</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="aboutus.html">aboutus</a>
+  </li>
+</ul>
+</header> 
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <p id="loginheading">User Login</p>
+    </div>
+
+    <!-- Login Form -->
+    <form>
+      <input type="text" id="login" class="fadeIn second" name="email" placeholder="email">
+      <input type="password" id="password" class="fadeIn third" name="pwd" placeholder="password" autocomplete="off">
+      <input type="submit" class="fadeIn fourth" value="Log In" onclick="check(this.form)">
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover" href="register.html">Do not have an account?</a>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
