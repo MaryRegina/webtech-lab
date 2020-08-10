@@ -23,8 +23,8 @@
        <comment>
             grind some chillies and keep the paste ready or you can take ready made chilly paste 
        </comment>
-       <nutrition calories="100" fat="13.4" protein="31" Cholesterol="85"></nutrition>
-       <rating>9 out of 10</rating>
+       <!-- <nutrition calories="100" fat="13.4" protein="31" Cholesterol="85"></nutrition>
+       <rating>9 out of 10</rating> -->
 </recipe>
 <recipe>
        <title>Pepper Chicken fry</title>
@@ -40,8 +40,8 @@
            <step>add chicken and marinate for 30 mins</step>
            <step>shallow fry and serve it hot</step>
        </prep>
-       <nutrition calories="70" fat="11.8" protein="24" ></nutrition>
-       <rating>7.0 out of 10</rating>
+       <!-- <nutrition calories="70" fat="11.8" protein="24" ></nutrition>
+       <rating>7.0 out of 10</rating> -->
 </recipe>
 <recipe>
        <title>chicken momo</title>
@@ -62,8 +62,8 @@
            <step>keep the stuffing in the dough and steam it</step>
            <step>steamed momo reay to serve</step>
        </prep>
-       <nutrition calories="30" fat="9.2" protein="18" ></nutrition>
-       <rating>9.5 out of 10</rating>
+       <!-- <nutrition calories="30" fat="9.2" protein="18" ></nutrition>
+       <rating>9.5 out of 10</rating> -->
 </recipe>
 
 </nonveg>
