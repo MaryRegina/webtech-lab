@@ -1,0 +1,16 @@
+
+<!ELEMENT nonveg (recipe+)>
+<!ELEMENT recipe (ingredients,prep,comment?,nutrition,rating)>
+<!ATTLIST recipe title CDATA #REQUIRED>
+<!ELEMENT ingredients (ingredient+)>
+<!ELEMENT ingredient EMPTY>
+<!ATTLIST ingredient name CDATA #REQUIRED amount CDATA #REQUIRED unit CDATA #IMPLIED>
+<!ELEMENT prep (step+)>
+<!ELEMENT step (#PCDATA)>
+<!ELEMENT comment (#PCDATA)>
+<!ELEMENT nutrition EMPTY>
+<!ATTLIST nutrition calories CDATA #IMPLIED
+                    fat CDATA #REQUIRED
+                    protein CDATA #REQUIRED 
+                    Cholesterol CDATA #IMPLIED>
+<!ELEMENT rating (#PCDATA)>
