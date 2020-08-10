@@ -20,9 +20,9 @@
            <step>add chicken and marinate for 30 mins</step>
            <step>deep fry and serve it hot</step>
        </prep>
-       <comment>
+       <!-- <comment>
             grind some chillies and keep the paste ready or you can take ready made chilly paste 
-       </comment>
+       </comment> -->
        <!-- <nutrition calories="100" fat="13.4" protein="31" Cholesterol="85"></nutrition>
        <rating>9 out of 10</rating> -->
 </recipe>
