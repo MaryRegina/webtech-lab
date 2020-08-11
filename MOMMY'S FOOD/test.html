@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -6,16 +6,12 @@
   <meta name="application-name" content="MOMMY'S FOOD">
   <meta name="author" content="Regina">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MOMMY'S_FOOD/user/dinnerspinner</title>
+  <title>MOMMY'S_FOOD/user</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
   <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-  <!--   for rest of the icons-->
   <style>
-    body {
-      font-family: "Lato", sans-serif;
-      transition: background-color .5s;
-    }
+
 
     .sidenav {
       height: 100%;
@@ -42,6 +38,11 @@
       background: none;
       width: 100%;
       text-align: left;
+    }
+
+    .fa-caret-down {
+      float: right;
+      padding-right: 8px;
     }
 
     .sidenav a:hover {
@@ -71,11 +72,6 @@
       }
     }
 
-    .fa-caret-down {
-      float: right;
-      padding-right: 8px;
-    }
-
     .dropdown-container {
       display: none;
       background-color: #262626;
@@ -86,94 +82,9 @@
       background-color: grey;
       color: white;
     }
+  /* uustom */
 
-
-    /*css for body*/
-    #div1 {
-      background-color: black;
-      margin-left: 100px;
-      margin-right: 100px;
-      height: 1100px;
-      margin-bottom: 50px;
-    }
-
-    #h1 {
-      color: orangered;
-      text-align: center;
-      margin-bottom: 100px;
-    }
-
-    #embed {
-      margin-left: 50px;
-    }
-
-    #p {
-      color: white;
-      float: right;
-      margin-right: 100px;
-    }
-
-    #div2 {
-      background-color: black;
-      margin-left: 100px;
-      margin-right: 100px;
-      border: 2px solid white;
-    }
-
-    #h4 {
-      color: white;
-      margin-left: 400px;
-      width: 300px;
-      background-color: orangered;
-      padding: 10px;
-      position: relative;
-      animation: myfirstanimation 5s linear 2s infinite alternate;
-    }
-
-    @keyframes myfirstanimation {
-      0% {
-        background-color: orangered;
-        left: -200px;
-        top: 0px;
-      }
-
-      50% {
-        background-color: orange;
-        left: 200px;
-        top: 0px;
-      }
-
-      100% {
-        background-color: orangered;
-        left: -200px;
-        top: 0px;
-      }
-    }
-
-    #img {
-      margin-left: 400px;
-    }
-
-    #button {
-      background-color: black;
-      margin-left: 440px;
-    }
-
-    p>a:hover {
-      color: orangered;
-    }
-
-    p>a:visited {
-      color: mediumpurple;
-    }
-
-    p>a:link {
-      text-decoration: underline;
-    }
-
-    p>a:active {
-      color: yellow;
-    }
+    #para {margin: 30px; margin-top: -100px;}
   </style>
 </head>
 
@@ -191,11 +102,7 @@
         <i class="fas fa-caret-down"></i>
       </button>
       <div class="dropdown-container">
-<<<<<<< HEAD
-        <a href="nonveg.html">Non-veg recipes</a>
-=======
         <a href="#">Non-veg recipes</a>
->>>>>>> 7961fc21b206c13cc33e4ac8ac7f5a78cb04a95d
         <a href="drinks.html">Drinks</a>
         <a href="#">Veg recipes</a>
       </div>
@@ -238,35 +145,46 @@
       }
     </script>
   </section>
+  <p id="para"></p>
+ 
+  <script>
+    xmlFile = "https://maryregina.github.io/webtech-lab/MOMMY'S%20FOOD/nonveg.xml"
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+        myFunction(this);
+      }
+    };
+    xhttp.open("GET", xmlFile, true);
+    xhttp.send();
 
-  <div id="div1">
-    <h1 class="brownstyletext" id="h1">dinner spinner&nbsp;<sub>the show</sub></h1>
+    function myFunction(xml) {
+      var parser, xmlDoc;
+      parser = new DOMParser();
+      xmlDoc = parser.parseFromString(xml.responseText, "text/xml");
+      document.getElementById("para").innerHTML =
+        myLoop(xmlDoc.documentElement);
+    }
 
-    <embed src="https://player.vimeo.com/video/184059008" width="640" height="360" id="embed">
+    function myLoop(x) {
+      var i, y, xLen, txt;
+      txt = "";
+      x = x.childNodes;
+      xLen = x.length;
+      for (i = 0; i < xLen; i++) {
+        y = x[i];
+        if (y.nodeType != 3) {
+          if (y.childNodes[0] != undefined) {
+            txt += myLoop(y);
+          }
+        } else {
+          txt += y.nodeValue + "<br>";
+        }
+      }
+      return txt;
+    }
+  </script>
 
-    <p id="p">Dinner Spinner TV, <br>part of One Magnificent Morning on The<br> CW. It’s the new cooking competition
-      <br>from the world’s largest community of<br> home cooks.Watch two home cooks<br> battle it out in a kitchen
-      competition<br> based on the popular Allrecipes Dinner<br> Spinner app! <br><br><br>
-
-      <a href="ds_bestrecipe.html" target="_blank">Best recipe of the week</a><br>
-      <a href="https://www.allrecipes.com/cook/dinnerspinnertvshow/favorites/" target="_blank">Some best recipes</a><br>
-      <a href="https://www.allrecipes.com/cook/dinnerspinnertvshow/reviews/" target="_blank">Reviews of the show</a></p>
-    <br><br>
-
-
-    <h4 id="h4" class="brownstyletext">follow the show</h4>
-
-
-    <div id="div2">
-      <blockquote class="embedly-card">
-        <h4><a href="https://www.allrecipes.com/cook/dinnerspinnertvshow/">Follow the show</a></h4>
-        <p>Follow the show Dinner Spinner and explore more recipes</p>
-      </blockquote>
-      <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
-    </div><br>
-
-    <!--    <button id="button"><a style="color:orangered"href="ds_bestrecipe.html">see best Recipe of the week</a></button>-->
-  </div>
 </body>
 
 </html>
