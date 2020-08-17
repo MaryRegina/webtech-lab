@@ -10,8 +10,8 @@
       <th style="text-align:left">Artist</th>
     </tr>
     <tr>
-      <td><xsl:value-of select="title"/></td>
-      <td><xsl:value-of select="artist"/></td>
+      <td><xsl:value-of select="category/cd/title"/></td>
+      <td><xsl:value-of select="category/cd/artist"/></td>
     </tr>
   </table>
 </body>
