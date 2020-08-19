@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-
+<?xml-stylesheet type="text/xsl" href="drinks.xsl"?>
 <!DOCTYPE drinks [
 <!ELEMENT drinks (drink+)>
 <!ELEMENT drink (ingredients,prep,(comment?),nutrition,rating)>
 <!ATTLIST drink title CDATA #REQUIRED>
 <!ELEMENT ingredients (ingredient+)>
 <!ELEMENT ingredient EMPTY>
-<!ATTLIST ingredient name CDATA #REQUIRED amount CDATA #REQUIRED unit CDATA #IMPLIED>
+<!ATTLIST ingredient name CDATA #REQUIRED 
+                     amount CDATA #REQUIRED 
+                     unit CDATA #IMPLIED>
 <!ELEMENT prep (step+)>
 <!ELEMENT step (#PCDATA)>
 <!ELEMENT comment (#PCDATA)>
@@ -19,22 +21,22 @@
 <!ELEMENT rating (#PCDATA)>
 ]>
 
-<drinks>
+<drinks src="images/drinks.png"> 
 <drink title="Lemon Shots">
        <ingredients>
        <ingredient name="lemon" amount="2"></ingredient>
        <ingredient name="sugar powder" amount="2 table spoons"></ingredient>
        <ingredient name="ice cubes" amount="3"></ingredient>
        <ingredient name="salt" amount="half tea spoon"></ingredient>
-       <ingredient name="soda" amount="100" unit="litre"></ingredient>
+       <ingredient name="soda" amount="100" unit="ml"></ingredient>
        </ingredients>
        <prep> 
-           <step>put some ice cubed in a glass</step>
-           <step>add a pinch of salt</step>
-           <step>pour 2 table spoons of lemon juice</step>
-           <step>add some powered sugar</step>
-           <step>pour 100ml of soda</step>
-           <step>shake it well and serve</step>
+           <step id="01">put some ice cubes in a glass</step>
+           <step id="02">add a pinch of salt</step>
+           <step id="03">pour 2 table spoons of lemon juice</step>
+           <step id="04">add some powered sugar</step>
+           <step id="05">pour 100ml of soda</step>
+           <step id="06">shake it well and serve</step>
        </prep>
        <comment>
             make lemon juice before starting with the recipe
@@ -45,9 +47,9 @@
 <drink title="Apple Milkshake">
        <ingredients>
        <ingredient name="apples" amount="2"></ingredient>
-       <ingredient name="milk" amount="1 cup" unit="ml"></ingredient>
+       <ingredient name="milk" amount="50" unit="ml"></ingredient>
        <ingredient name="powered sugar" amount="3 table spoons"></ingredient>
-       <ingredient name="ice cubes" amount="2" unit="ml"></ingredient>
+       <ingredient name="ice cubes" amount="2"></ingredient>
        </ingredients>
        <prep> 
            <step>dice apples</step>
@@ -58,6 +60,26 @@
            <step>serve it cold</step>
        </prep>
        <nutrition calories="30" fat="0.6" protein="2.5" fiber="6"></nutrition>
+       <rating>7.5 out of 10</rating>
+</drink>
+<drink title="Beetroot Juice (drink for rainy season)">
+       <ingredients>
+       <ingredient name="beetroot" amount="2"></ingredient>
+       <ingredient name="milk" amount="50" unit="ml"></ingredient>
+       <ingredient name="powered sugar" amount="3 table spoons"></ingredient>
+       <ingredient name="mint leaves" amount="20"></ingredient>
+       <ingredient name="ice cubes" amount="2"></ingredient>
+       </ingredients>
+       <prep> 
+           <step>cut 2 beetroots to half each</step>
+           <step>put beetroot slices in a juicer jar and pour milk in it</step>
+           <step>add some powered sugar</step>
+           <step>add ice cubes</step>
+           <step>add some mint leaves</step>
+           <step>blend it well</step>
+           <step>serve it cold</step>
+       </prep>
+       <nutrition calories="30" fat="0.6" protein="2.5" fiber="10"></nutrition>
        <rating>7.5 out of 10</rating>
 </drink>
 </drinks>
