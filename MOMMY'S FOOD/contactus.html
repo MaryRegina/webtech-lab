@@ -1,68 +1,106 @@
 <!doctype html>
 <html>
+
 <head>
-<title>MOMMY'S_FOOD/contactus</title>
-<link rel=stylesheet type="text/css" href="css/style.css">
-<style>
-    #maindiv{
-        margin: 50px;
+  <title>MOMMY'S_FOOD/contactus</title>
+  <link rel=stylesheet type="text/css" href="css/style.css">
+  <style>
+    #maindiv {
+      margin: 50px;
     }
-    
-    legend{
-        text-transform: uppercase;
-        font-family:cursive;
-        color:darkred;
-        text-shadow: 1px 2px black;
-        margin-bottom: 20px;
-        margin-top: 40px;
+
+    legend {
+      text-transform: uppercase;
+      font-family: cursive;
+      color: darkred;
+      text-shadow: 1px 2px black;
+      margin-bottom: 20px;
+      margin-top: 40px;
     }
-    #select{
-        width:200px;
-        height: 30px;
+
+    #select {
+      width: 200px;
+      height: 30px;
     }
-    #mail{
-        height: 23px;
+
+    #mail {
+      height: 23px;
     }
-    
-    #fieldset{
-        width:400px;
+
+    #fieldset {
+      width: 400px;
     }
-</style>
-    <script>
-function myFunction() {
-  alert("Query submitted successfully");
-}
-</script>
+    .div{
+      color:red;font-size:12px;margin-top: -15px;margin-bottom:15px;
+    }
+  </style>
+  <script>
+    function validateForm() {
+      var email = document.forms["contactusform"]["email"].value;
+      var query = document.forms["contactusform"]["query"].value;
+      // checking for null fields (alternate-> "required" can be given, which is html automatic validation")
+      if (query == "" || (email=="")) {
+        alert("Please fill out all the fields");
+        return false;
+      }
+      
+      // email
+      else if(!/^[A-Za-z0-9]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(contactusform.email.value))
+       {
+        document.getElementById('emaildiv').innerHTML = "Invalid email address!";
+        contactusform.email.focus();
+        return false;
+       }
+
+       //query
+       else if(query.length>5){
+        document.getElementById('querydiv').innerHTML = "You have reached the maximum length!";
+        contactusform.query.focus();
+        return false;
+      }
+      else {
+        alert("Query submitted successfully, we will reach you in short time");
+      }
+    }
+  </script>
 
 </head>
 
 <body>
-<header>
+  <header>
     <img src="images/contactus.jpg">
-</header>  
-<form >
-  <fieldset id="fieldset">
-    <legend>Contact us</legend>
-    <label for="fname">Mail id:</label><br>
-    <input type="email" id="mail" name="email" size="30" required><br><br>
-      
-      
-    <label for="category">What's this about?</label><br>
-     <select name="category" id="select">
-    <optgroup label="Recipe">
-      <option value="posts">Posts</option>
-      <option value="queries">queries</option>
-    </optgroup>
-    <optgroup label="Payment">
-      <option value="delay">Delay</option>
-      <option value="account">Account problem</option>
-      <option value="giftcards">Gift card</option>
-    </optgroup>
-      <option>other</option>
-  </select><br><br><br>
-    <textarea name="comment" rows="4" cols="50" maxlength="50" placeholder="How Can We Help You?" required></textarea> <br><br>
-      <input type="submit" value="Submit" onclick="myFunction()"><br><br>
-  </fieldset>
-</form>
+  </header>
+  <form name="contactusform" method="POST" onsubmit="return validateForm()">
+    <fieldset id="fieldset">
+      <legend>Contact us</legend>
+
+      <label for="fname">Mail id:</label><br>
+      <!-- automatic HTML form validation -->
+      <input type="text" id="email" name="email" size="30"><br><br>
+      <div class="div" id="emaildiv"></div>
+      <!-- <input type="email" id="mail" name="email" size="30"><br><br> -->
+
+
+      <label for="category">What's this about?</label><br>
+      <select name="category" id="select">
+        <optgroup label="Recipe">
+          <option value="posts">Posts</option>
+          <option value="queries">queries</option>
+        </optgroup>
+        <optgroup label="Payment">
+          <option value="delay">Delay</option>
+          <option value="account">Account problem</option>
+          <option value="giftcards">Gift card</option>
+        </optgroup>
+        <option>other</option>
+      </select><br><br><br>
+
+      <!-- max length: No of characters it can accept -->
+      <textarea name="query" id="query" rows="4" cols="50" placeholder="How Can We Help You?"></textarea> <br><br>
+      <div class="div" id="querydiv"></div>
+      <input type="submit" value="Submit"><br><br>
+    </fieldset>
+  </form>
 </body>
+
 </html>

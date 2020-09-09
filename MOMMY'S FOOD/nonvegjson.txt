@@ -1,0 +1,25 @@
+
+{
+  "nonvegrecipes": {
+  "recipe1":{
+     "title":"Chilly Chicken",
+     "ingredients":[
+       {"ingr":"Cornflour","amount":2,"unit":"table spoon" },
+       {"ingr":"ginger garlic paste","amount":50,"unit":"grams" },
+       {"ingr":"chilly paste", "amount":1, "unit":"tea spoon"},
+       {"ingr":"chicken", "amount":500, "unit":"grams"}
+      ],
+      "prep":["Take a bowl, put some cornflour","add a pinch of salt","add genger garlic paste","add chilly paste","mix all the ingredients well","add chicken and marinate for 30 mins","deep fry and serve it hot"]
+  },
+  "recipe2":{
+   "title":"Pepper Chicken fry",
+   "ingredients":[
+       {"ingr":"Cornflour","amount":2,"unit":"table spoon" },
+       {"ingr":"ginger garlic paste","amount":50,"unit":"grams"},
+       {"ingr":"chilly paste", "amount":1, "unit":"tea spoon"},
+       {"ingr":"chicken", "amount":500, "unit":"grams"}
+      ],
+      "prep":["Take a bowl, put some pepper powder","add a pinch of salt","mix the ingredients well","add chilly paste","mix all the ingredients well","add chicken and marinate for 30 mins","shallow fry and serve it hot"]
+  }
+}
+}

@@ -1,222 +1,240 @@
 <!doctype html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<meta name="application-name" content="MOMMY'S FOOD">
-<meta name="author" content="Regina">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MOMMY'S_FOOD/user/drinks</title>
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/style.css">
-<script src='https://kit.fontawesome.com/a076d05399.js'></script>
-<!--   for rest of the icons-->
-<style>
-body {
-  font-family: "Lato", sans-serif;
-}
-
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: black;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
-
-.sidenav a, .dropdown-btn{
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-  border:0px;
-  background: none;
-  width: 100%;
-  text-align: left;
-}
-
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-#main {
-  transition: margin-left .5s;
-  padding: 16px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-    
-.fa-caret-down {
-  float: right;
-  padding-right: 8px;
-}
- .dropdown-container {
-  display: none;
-  background-color: #262626;
-  padding-left: 8px;
-}
-.active {
-  background-color: grey;
-  color: white;
-}
- .image{
-    margin-left: 300px; 
-    margin-top:100px; 
-    margin-bottom: 20px; 
-    border: 5px solid white;
-    
+  <meta charset="utf-8">
+  <meta name="application-name" content="MOMMY'S FOOD">
+  <meta name="author" content="Regina">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MOMMY'S_FOOD/user/drinks</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <!--   for rest of the icons-->
+  <style>
+    body {
+      font-family: "Lato", sans-serif;
     }
-    .margin{
-        margin:80px;
+
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: black;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
     }
-    .button a:hover{
-        background-color: skyblue;
+
+    .sidenav a,
+    .dropdown-btn {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+      border: 0px;
+      background: none;
+      width: 100%;
+      text-align: left;
     }
-    #button{
-        border: 0px;
-        background-color: white;
-        font-size: 14px;
-        position: relative;
-        bottom:40px;
+
+    .sidenav a:hover {
+      color: #f1f1f1;
     }
-    #p{
-        position: relative;
-        bottom: 40px;
+
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
     }
-    
-</style>
+
+    #main {
+      transition: margin-left .5s;
+      padding: 16px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .sidenav {
+        padding-top: 15px;
+      }
+
+      .sidenav a {
+        font-size: 18px;
+      }
+    }
+
+    .fa-caret-down {
+      float: right;
+      padding-right: 8px;
+    }
+
+    .dropdown-container {
+      display: none;
+      background-color: #262626;
+      padding-left: 8px;
+    }
+
+    .active {
+      background-color: grey;
+      color: white;
+    }
+
+    .image {
+      margin-left: 300px;
+      margin-top: 100px;
+      margin-bottom: 20px;
+      border: 5px solid white;
+
+    }
+
+    .margin {
+      margin: 80px;
+    }
+
+    .button a:hover {
+      background-color: skyblue;
+    }
+
+    #button {
+      border: 0px;
+      background-color: white;
+      font-size: 14px;
+      position: relative;
+      bottom: 40px;
+    }
+
+    #p {
+      position: relative;
+      bottom: 40px;
+    }
+  </style>
 
 </head>
 
 <body>
-    <header style="height: 90px;" class="header"> <h1 class="h1">mommy's food</h1>
-</header> 
-<section>
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="main.html"><span class="fas fa-home"></span>&nbsp;Home</a>
-  <a href="profile.html"><span class="fas fa-user"></span>&nbsp;Profile</a>
-    <a href="#"><span class="fas fa-file-video"></span>&nbsp;Post Recipes</a>
-    <button class="dropdown-btn"><span class="fas fa-utensils"></span>&nbsp;Explore Recipes 
-    <i class="fas fa-caret-down"></i>
-  </button>
-    <div class="dropdown-container">
-    <a href="nonveg.html">Non-veg recipes</a>
-    <a href="drinks.html">Drinks</a>
-    <a href="#">Veg recipes</a>
+  <header style="height: 90px;" class="header">
+    <h1 class="h1">mommy's food</h1>
+  </header>
+  <section>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="main.html"><span class="fas fa-home"></span>&nbsp;Home</a>
+      <a href="profile.html"><span class="fas fa-user"></span>&nbsp;Profile</a>
+      <a href="#"><span class="fas fa-file-video"></span>&nbsp;Post Recipes</a>
+      <button class="dropdown-btn"><span class="fas fa-utensils"></span>&nbsp;Explore Recipes
+        <i class="fas fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="nonveg.html">Non-veg recipes</a>
+        <a href="drinks.html">Drinks</a>
+        <a href="#">Veg recipes</a>
+      </div>
+      <a href="dinnerspinnertv.html"><span class="fas fa-tv"></span>&nbsp;Dinner Spinner TV</a>
+      <a href="#"><span class="fas fa-bullhorn"></span>&nbsp;Food News</a>
+      <a href="community.html"><span class="fas fa-comment-alt"></span>&nbsp;Ask our community</a>
+      <a href="contactus.html"><span class="fas fa-phone-alt"></span>&nbsp;Contact us</a>
+      <a href="main.html"><span class="fas fa-sign-out-alt"></span>&nbsp;Logout</a>
+    </div>
+
+    <div style="position:relative; bottom:60px;" id="main">
+      <span style="font-size:30px;cursor:pointer; color:white;" onclick="openNav()">&#9776;</span>
+    </div>
+
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "300px";
+        document.getElementById("main").style.marginLeft = "300px";
+        //  document.body.style.backgroundColor = "rgba(1,1,0,0.4)";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+        //  document.body.style.backgroundColor = "white";
+      }
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var dropdownContent = this.nextElementSibling;
+          if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+          } else {
+            dropdownContent.style.display = "block";
+          }
+        });
+      }
+    </script>
+  </section>
+
+  <div style="background-color: antiquewhite; width:100%;height:500px;">
+    <img class="image" src="images/limemint.jpg">
+    <h4 style="float:right;margin-right: 350px; margin-top: 150px; " class="brownstyletext">Juice recipes</h4>
+    <p style="float:right;margin-top:-120px;margin-right: 200px;">Start your day with a freshly blended juice or
+      smoothie.<br>Our refreshing drinks recipes are packed with fruit and veg,<br> delivering a feelgood vitamin boost.
+    </p>
   </div>
-  <a href="dinnerspinnertv.html"><span class="fas fa-tv"></span>&nbsp;Dinner Spinner TV</a>
-  <a href="#"><span class="fas fa-bullhorn"></span>&nbsp;Food News</a>
-  <a href="community.html"><span class="fas fa-comment-alt"></span>&nbsp;Ask our community</a>
-  <a href="contactus.html"><span class="fas fa-phone-alt"></span>&nbsp;Contact us</a>
-  <a href="main.html"><span class="fas fa-sign-out-alt"></span>&nbsp;Logout</a>
-</div>
 
-<div style="position:relative; bottom:60px;" id="main">
-  <span style="font-size:30px;cursor:pointer; color:white;" onclick="openNav()">&#9776;</span>
-</div>
+  <div class="margin">
+    <video width="500" height="300" controls loop>
+      <source src="videos/lemonshot.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <p class="brownstyletext">Non-Alcoholic Lemon Drop Shots Recipe</p>
+  </div>
 
-<script>
-function openNav() {
-  document.getElementById("mySidenav").style.width = "300px";
-  document.getElementById("main").style.marginLeft = "300px";
-//  document.body.style.backgroundColor = "rgba(1,1,0,0.4)";
-}
+  <div style="position:relative;left:650px;bottom:447px;" class="margin">
+    <video width="500" height="300" controls>
+      <source src="videos/applemilkshake.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <p class="brownstyletext">Apple Milkshake Recipe</p>
+  </div>
 
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
-//  document.body.style.backgroundColor = "white";
-}
-var dropdown = document.getElementsByClassName("dropdown-btn");
-var i;
+  <div style="position:relative; bottom:400px;" class="margin">
+    <video width="500" height="300" controls poster="images/limemint.jpg" muted>
+      <source src="videos/lime.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <p class="brownstyletext">Mint Lime Juice</p>
+  </div>
 
-for (i = 0; i < dropdown.length; i++) {
-  dropdown[i].addEventListener("click", function() {
-  this.classList.toggle("active");
-  var dropdownContent = this.nextElementSibling;
-  if (dropdownContent.style.display === "block") {
-  dropdownContent.style.display = "none";
-  } else {
-  dropdownContent.style.display = "block";
-  }
-  });
-}
-</script>
-</section>
-    
-<div style="background-color: antiquewhite; width:100%;height:500px;">
-<img class="image" src="images/limemint.jpg">
-<h4 style="float:right;margin-right: 350px; margin-top: 150px; " class="brownstyletext">Juice recipes</h4>
-<p style="float:right;margin-top:-120px;margin-right: 200px;">Start your day with a freshly blended juice or smoothie.<br>Our refreshing drinks recipes are packed with fruit and veg,<br> delivering a feelgood vitamin boost.</p>
-</div>
- 
-<div class="margin">
-<video width="500" height="300" controls loop>
-  <source src="videos/lemonshot.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-<p class="brownstyletext">Non-Alcoholic Lemon Drop Shots Recipe</p>
-</div>
+  <div style="position:relative;left:650px;bottom:850px;" class="margin">
+    <video id="video" width="500" height="300" controls>
+      <source src="videos/fuljar.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video><br>
 
-<div style="position:relative;left:650px;bottom:447px;" class="margin">
-<video width="500" height="300" controls>
-  <source src="videos/applemilkshake.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-<p class="brownstyletext">Apple Milkshake Recipe</p>
-</div>
+    <button id="button" class="button" onclick="myFunction()"><a class="button"><span
+          class="fas fa-headphones-alt">&nbsp;JustListen</span></a></button>
 
-<div style="position:relative; bottom:400px;" class="margin">
-<video width="500" height="300" controls poster="images/limemint.jpg" muted>
-  <source src="videos/lime.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-<p class="brownstyletext">Mint Lime Juice</p>
-</div>
+    <audio id="audio" controls style="visibility: hidden">
+      <source src="audios/audio.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
 
-<div style="position:relative;left:650px;bottom:850px;" class="margin">
-<video id="video" width="500" height="300" controls>
-  <source src="videos/fuljar.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video><br>
-    
-<button id="button" class="button" onclick="myFunction()"><a class="button"><span class="fas fa-headphones-alt">&nbsp;JustListen</span></a></button>
-    
-<audio id="audio" controls style="visibility: hidden">
-  <source src="audios/audio.mp3" type="audio/mp3">
-Your browser does not support the audio element.
-</audio>
-    
-<p id="p" class="brownstyletext">Kerala FulJar Soda</p>
-</div>
+    <p id="p" class="brownstyletext">Kerala FulJar Soda</p>
+  </div>
 
-<script>
+  <script>
     function myFunction() {
-    document.getElementById("video").style.display = "none";
-    document.getElementById("audio").style.visibility = "visible";
-    document.getElementById("button").style.display = "none";
-    document.getElementById("button1").style.visibility = "visible";
+      document.getElementById("video").style.display = "none";
+      document.getElementById("audio").style.visibility = "visible";
+      document.getElementById("button").style.display = "none";
+      document.getElementById("button1").style.visibility = "visible";
     }
-</script>
-    
+  </script>
+
 
 </body>
+
 </html>

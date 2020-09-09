@@ -25,7 +25,37 @@
     #maindiv{
         margin-left: 10px;
     }
+    .div{
+      color:red;font-size:12px;margin-bottom:5px;
+    }
 </style>
+<script>
+    function validateForm() {
+      var email = document.forms["registerform"]["email"].value;
+      var createpwd = document.forms["registerform"]["createpwd"].value;
+      var confirmpwd = document.forms["registerform"]["confirmpwd"].value;
+      // for email
+      if(!/^[A-Za-z0-9]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(registerform.email.value))
+      {
+        document.getElementById('emaildiv').innerHTML = "Invalid email address!";
+        return false;
+      }
+      // // password rules 
+      else if(!/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/.test(registerform.createpwd.value))
+      {
+        document.getElementById('pwddiv').innerHTML = "Password must have atleast 1 uppercase, 1 lowercase, a special char and a number";
+        return false;
+      }
+      // for pwd matching
+      else if(createpwd!=confirmpwd){
+        document.getElementById('confirmpwdiv').innerHTML = "No match in paswords!";
+        return false;
+      }
+      else{
+        return true;
+      }
+    }
+</script>
 </head>
     
     
@@ -48,21 +78,23 @@
 </ul>
 </header> 
 <div id="maindiv">
-<form action="login.html" name="register">
+<form action="login.html" name="registerform" method="POST" onsubmit="return validateForm()"> 
  
   <h4 id=formheading>Register as user</h4>
   <div class="row">
     <div class="col">
-      <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" required>
+      <!-- "required" is the automatic html validation -->
+      <input type="text" class="form-control" id="name" placeholder="Enter name *" id="name" name="name" maxlength="30" required>
     </div>
     <div class="col registercoldiv">
-      <input type="email" class="form-control " id="email" placeholder="Enter email" name="email" required >
+      <input type="text" class="form-control " id="email" placeholder="Enter email *" name="email" maxlength="50" required >
+      <div id="emaildiv" class="div"></div>
     </div>
   </div>
     
   <div class="row">
   <div class="col">
-      <input type="text" class="form-control" placeholder="Enter phno" name="phno" maxlength=10 required>
+      <input type="text" class="form-control" placeholder="Enter phno *" id="phno" name="phno" maxlength=10 minlength=10 required>
   </div>
   <div class="col registercoldiv" >
       <lable for="gender">gender: &nbsp; <label for="male"><input type="radio" class="form-control-sm" name="gender">male &nbsp;</label><label for="female"><input type="radio" class="form-control-md" name="gender" >female</label></lable>
@@ -70,10 +102,12 @@
   </div>
   <div class="row">
     <div class="col">
-      <input type="password" class="form-control" placeholder="Create password" name="createpwd" required>
+      <input type="password" class="form-control" placeholder="Create password *" id="createpwd" name="createpwd" minlength="8" required>
+      <div id="pwddiv" class="div"></div>
     </div>
     <div class="col registercoldiv">
-      <input type="password" class="form-control" placeholder="Confirm password" name="confirmpwd" required>
+      <input type="password" class="form-control" placeholder="Confirm password *" id="confirmpwd" name="confirmpwd" required>
+      <div id="confirmpwdiv" class="div"></div>
     </div>
   </div>
     
