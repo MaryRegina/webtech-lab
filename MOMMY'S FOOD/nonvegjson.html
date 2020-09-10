@@ -116,7 +116,29 @@
         }
 
         /* custom */
-        #img{ margin-top:20px;margin-left:60px;}
+        #img {
+            margin-top: 20px;
+            margin-left: 60px;
+        }
+
+        .div {
+            margin-top: 50px;
+            text-align: center;
+            margin-left: 60px;
+            width: 1235px;
+            height: 450px;
+        }
+
+        .p {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 17px;
+        }
+
+        .h5 {
+
+            font-weight: bold;
+            font-family: cursive;
+        }
     </style>
 
 </head>
@@ -182,17 +204,54 @@
     <img id="img" src="images/nonveg.png" />
     <p style="margin-top: -350px; color:white; font-size: 30px; margin-left: 200px; font-family: serif;">Best Indian
         Chicken Recipes | <br> Easy Chicken Recipes</p>
-    
-    <p style="margin-top: 300px;"id="demo"></p>
+    <p style="margin-top: 300px;" id="demo"></p>
+
+    <div style="background-color:#228B22;" class="div">
+        <h4 id="h41" class="brownstyletext"></h4>
+        <h5 class="h5">Ingredients</h2>
+            <p id="para1.1" class="p"></p>
+            <h5 class="h5">Steps</h2>
+                <p id="para1.2" class="p"></p>
+    </div>
+
+    <div style="background-color:dimgray; margin-bottom:100px;" class="div">
+        <h4 id="h42" class="brownstyletext"></h4>
+        <h5 class="h5">Ingredients</h2>
+            <p id="para2.1" class="p"></p>
+            <h5 class="h5">Steps</h2>
+                <p id="para2.2" class="p"></p>
+    </div>
 
     <script>
-        json_txt_file = "https://maryregina.github.io/demo/jsonfile.txt"
+        json_txt_file = "https://maryregina.github.io/webtech-lab/MOMMY'S%20FOOD/nonvegjson.txt"
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
                 var myObj = JSON.parse(this.responseText);
-                document.getElementById("demo").innerHTML = myObj.name;
+                var x;
+                document.getElementById("h41").innerHTML = myObj.nonvegrecipes.recipe1.title;
+                for (i in myObj.nonvegrecipes.recipe1.ingredients) {
+                    for (j in myObj.nonvegrecipes.recipe1.ingredients[i]) {
+                        document.getElementById("para1.1").innerHTML += myObj.nonvegrecipes.recipe1.ingredients[i][j] + "&nbsp;";
+                    }
+                }
+                for (i = 0; i < myObj.nonvegrecipes.recipe1.prep.length; i++) {
+                    document.getElementById("para1.2").innerHTML += myObj.nonvegrecipes.recipe1.prep[i] + "<br>";
+                }
+
+
+                document.getElementById("h42").innerHTML = myObj.nonvegrecipes.recipe2.title;
+                for (i in myObj.nonvegrecipes.recipe2.ingredients) {
+                    for (j in myObj.nonvegrecipes.recipe2.ingredients[i]) {
+                        document.getElementById("para2.1").innerHTML += myObj.nonvegrecipes.recipe2.ingredients[i][j] + "&nbsp;";
+                    }
+                }
+                for (i = 0; i < myObj.nonvegrecipes.recipe2.prep.length; i++) {
+                    document.getElementById("para2.2").innerHTML += myObj.nonvegrecipes.recipe2.prep[i] + "<br>";
+                }
+
             }
+
         };
         xmlhttp.open("GET", json_txt_file, true);
         xmlhttp.send();
